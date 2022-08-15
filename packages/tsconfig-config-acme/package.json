@@ -1,0 +1,14 @@
+{
+  "name": "tsconfig-config-acme",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "base.json",
+    "node16.json",
+    "react-library.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

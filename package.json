@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --no-cache --parallel --continue",
+    "lint": "turbo run lint",
+    "lint:packages": "syncpack list-mismatches",
+    "lint:format": "prettier --write \"**/*.{js,ts,tsx,md,mdx}\"",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo run build --filter=docs^... && changeset publish",
+    "types:check": "turbo run types:check"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.22.0",
+    "prettier": "^2.7.1",
+    "prettier-config-acme": "0.0.0",
+    "syncpack": "^8.2.4",
+    "turbo": "latest"
+  }
+}
