@@ -5,7 +5,7 @@ export interface AnchorProps {
 }
 
 export function Anchor(props: AnchorProps) {
-  return <a>{props.children}</a>;
+  return <a href="#">{props.children}</a>;
 }
 
 Anchor.displayName = 'Anchor';

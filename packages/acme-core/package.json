@@ -12,12 +12,15 @@
   ],
   "scripts": {
     "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "clean": "rm -rf .turbo && rm -rf cypress/videos && rm -rf node_modules && rm -rf dist",
     "dev": "tsup src/index.tsx --format esm,cjs --watch --dts --external react",
     "lint": "TIMING=1 eslint src/**/*.ts* --fix",
+    "test": "cypress run --component",
+    "test:gui": "cypress open --component --browser chrome",
     "types:check": "tsc --noEmit"
   },
   "devDependencies": {
+    "@testing-library/cypress": "^8.0.3",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
     "@vitejs/plugin-react": "^2.0.1",

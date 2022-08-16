@@ -1,5 +1,8 @@
 {
   "extends": "tsconfig-config-acme/react-library.json",
   "include": ["."],
-  "exclude": ["dist", "build", "node_modules"]
+  "exclude": ["dist", "build", "node_modules"],
+  "compilerOptions": {
+    "types": ["cypress", "@testing-library/cypress", "node"]
+  }
 }

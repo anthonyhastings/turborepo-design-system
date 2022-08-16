@@ -14,6 +14,7 @@
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "turbo run build --filter=docs^... && changeset publish",
+    "test": "turbo run test",
     "types:check": "turbo run types:check"
   },
   "devDependencies": {
