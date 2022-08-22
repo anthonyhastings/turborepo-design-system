@@ -22,6 +22,6 @@
     "prettier": "^2.7.1",
     "prettier-config-acme": "0.0.0",
     "syncpack": "^8.2.4",
-    "turbo": "latest"
+    "turbo": "^1.4.3"
   }
 }
