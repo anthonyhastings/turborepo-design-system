@@ -14,14 +14,21 @@
     "dev": "tsup src/index.tsx --format esm,cjs --watch --dts --external react",
     "lint": "TIMING=1 eslint src/**/*.ts* --fix",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "test": "jest",
     "types:check": "tsc --noEmit"
   },
   "devDependencies": {
+    "@testing-library/react-hooks": "^8.0.1",
+    "@types/jest": "28.1.7",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
     "eslint": "^8.15.0",
     "eslint-config-acme": "0.0.0",
+    "jest": "^28.1.3",
     "react": "^18.1.0",
+    "react-test-renderer": "^18.1.0",
+    "ts-jest": "^28.0.8",
+    "ts-node": "^10.9.1",
     "tsup": "^5.10.1",
     "tsconfig-config-acme": "0.0.0",
     "typescript": "^4.5.4"
