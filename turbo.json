@@ -1,31 +1,31 @@
 {
+  "$schema": "https://turborepo.org/schema.json",
+  "globalDependencies": [
+    ".prettierrc.js",
+    "**/eslint-config-acme/index.js",
+    "**/prettier-config-acme/index.js",
+    "**/tsconfig-config-acme/*.json"
+  ],
   "pipeline": {
     "build": {
-      "outputs": [
-        "dist/**",
-        ".next/**"
-      ],
-      "dependsOn": [
-        "^build"
-      ]
-    },
-    "test": {
-      "outputs": [
-        "coverage/**"
-      ],
-      "dependsOn": []
-    },
-    "lint": {
-      "outputs": []
-    },
-    "dev": {
-      "cache": false
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", "storybook-static/**"]
     },
     "clean": {
       "cache": false
     },
-    "types:check": {
+    "dev": {
       "cache": false
+    },
+    "lint": {
+      "outputs": []
+    },
+    "test": {
+      "outputs": ["coverage/**"]
+    },
+    "types:check": {
+      "inputs": ["**/*.ts", "**/*.tsx"],
+      "outputs": []
     }
   }
 }
