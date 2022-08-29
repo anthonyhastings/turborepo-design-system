@@ -7,8 +7,5 @@
     "base.json",
     "node16.json",
     "react-library.json"
-  ],
-  "publishConfig": {
-    "access": "public"
-  }
+  ]
 }
