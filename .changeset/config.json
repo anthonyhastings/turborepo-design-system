@@ -5,7 +5,7 @@
   "changelog": "@changesets/cli/changelog",
   "commit": false,
   "fixed": [],
-  "ignore": ["@acme/docs"],
+  "ignore": ["config-tsconfig", "@acme/docs"],
   "linked": [],
   "updateInternalDependencies": "patch"
 }

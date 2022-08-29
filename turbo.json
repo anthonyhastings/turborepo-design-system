@@ -4,7 +4,7 @@
     ".prettierrc.js",
     "**/eslint-config-acme/index.js",
     "**/prettier-config-acme/index.js",
-    "**/tsconfig-config-acme/*.json"
+    "**/config-tsconfig/*.json"
   ],
   "pipeline": {
     "build": {
