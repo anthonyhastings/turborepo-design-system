@@ -11,7 +11,7 @@
     "lint:packages": "syncpack list-mismatches",
     "lint:format": "prettier --write \"**/*.{js,ts,tsx,md,mdx}\"",
     "clean": "turbo run clean && rm -rf node_modules",
-    "changeset": "changeset",
+    "changeset": "changeset add",
     "version-packages": "changeset version",
     "release": "turbo run build --filter=docs^... && changeset publish",
     "test": "turbo run test",
