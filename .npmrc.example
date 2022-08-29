@@ -1,0 +1,3 @@
+registry=https://registry.npmjs.org
+@anthonyhastings:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=INSERT_YOUR_GITHUB_ACCESS_TOKEN_HERE
