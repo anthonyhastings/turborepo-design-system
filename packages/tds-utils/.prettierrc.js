@@ -1,3 +1,3 @@
 module.exports = {
-  ...require('prettier-config-acme'),
+  ...require('config-prettier'),
 };

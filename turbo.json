@@ -1,9 +1,8 @@
 {
   "$schema": "https://turborepo.org/schema.json",
   "globalDependencies": [
-    ".prettierrc.js",
     "**/eslint-config-acme/index.js",
-    "**/prettier-config-acme/index.js",
+    "**/config-prettier/index.js",
     "**/config-tsconfig/*.json"
   ],
   "pipeline": {

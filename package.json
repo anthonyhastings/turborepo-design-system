@@ -23,7 +23,6 @@
     "@commitlint/config-conventional": "^17.0.3",
     "husky": "^8.0.1",
     "prettier": "^2.7.1",
-    "prettier-config-acme": "0.0.0",
     "syncpack": "^8.2.4",
     "turbo": "^1.4.3"
   }
