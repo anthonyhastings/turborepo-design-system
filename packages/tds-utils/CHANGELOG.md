@@ -1,4 +1,4 @@
-# @acme/utils
+# @anthonyhastings/tds-utils
 
 ## 0.0.1
 
