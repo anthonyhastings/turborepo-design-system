@@ -9,7 +9,7 @@
     "preview": "serve storybook-static"
   },
   "dependencies": {
-    "@acme/core": "0.0.0",
+    "@anthonyhastings/tds-core": "0.0.0",
     "@acme/deprecated": "0.0.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
