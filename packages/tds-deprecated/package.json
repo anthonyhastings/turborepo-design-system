@@ -1,7 +1,15 @@
 {
-  "name": "@acme/deprecated",
-  "version": "0.0.0",
-  "description": "Collection of deprecated components.",
+  "name": "@anthonyhastings/tds-deprecated",
+  "description": "A collection of deprecated components preserved for historical purposes.",
+  "version": "0.0.1",
+  "repository": {
+    "directory": "packages/tds-core",
+    "type": "git",
+    "url": "https://github.com/anthonyhastings/turborepo-design-system.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -34,8 +42,5 @@
     "tsup": "^5.10.1",
     "typescript": "^4.5.4",
     "vite": "^3.0.8"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   }
 }
