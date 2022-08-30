@@ -5,7 +5,7 @@
   "changelog": "@changesets/cli/changelog",
   "commit": false,
   "fixed": [],
-  "ignore": ["@acme/docs"],
+  "ignore": [],
   "linked": [],
   "updateInternalDependencies": "patch"
 }

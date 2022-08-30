@@ -1,5 +1,5 @@
 {
-  "name": "@acme/docs",
+  "name": "tds-docs",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,8 @@
     "preview": "serve storybook-static"
   },
   "dependencies": {
-    "@acme/core": "0.0.0",
+    "@anthonyhastings/tds-core": "^0.0.1",
+    "@anthonyhastings/tds-deprecated": "^0.0.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
@@ -18,9 +19,9 @@
     "@storybook/addon-links": "^6.4.18",
     "@storybook/builder-vite": "^0.2.2",
     "@storybook/react": "^6.4.18",
-    "prettier-config-acme": "0.0.0",
+    "config-prettier": "*",
+    "config-tsconfig": "*",
     "serve": "^13.0.2",
-    "tsconfig-config-acme": "0.0.0",
     "typescript": "^4.5.4",
     "vite": "^3.0.8"
   }

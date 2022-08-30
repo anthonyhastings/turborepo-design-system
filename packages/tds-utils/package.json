@@ -1,5 +1,6 @@
 {
   "name": "@anthonyhastings/tds-utils",
+  "description": "A collection of utility methods and react hooks.",
   "version": "0.0.1",
   "repository": {
     "directory": "packages/tds-utils",
@@ -30,16 +31,16 @@
     "@types/jest": "28.1.7",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
+    "config-prettier": "*",
+    "config-tsconfig": "*",
     "eslint": "^8.15.0",
-    "eslint-config-acme": "0.0.0",
+    "eslint-config-tds": "*",
     "jest": "^28.1.3",
-    "prettier-config-acme": "0.0.0",
     "react": "^18.1.0",
     "react-test-renderer": "^18.1.0",
     "ts-jest": "^28.0.8",
     "ts-node": "^10.9.1",
     "tsup": "^5.10.1",
-    "tsconfig-config-acme": "0.0.0",
     "typescript": "^4.5.4"
   }
 }

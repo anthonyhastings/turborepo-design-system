@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  extends: ['acme'],
+  extends: ['tds'],
   env: {
     browser: true,
     es2020: true,

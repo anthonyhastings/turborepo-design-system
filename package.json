@@ -13,7 +13,8 @@
     "clean": "turbo run clean && rm -rf node_modules",
     "changeset": "changeset add",
     "version-packages": "changeset version",
-    "release": "turbo run build --filter=docs^... && changeset publish",
+    "prerelease": "yarn run build",
+    "release": "changeset publish",
     "test": "turbo run test",
     "types:check": "turbo run types:check"
   },
@@ -23,7 +24,6 @@
     "@commitlint/config-conventional": "^17.0.3",
     "husky": "^8.0.1",
     "prettier": "^2.7.1",
-    "prettier-config-acme": "0.0.0",
     "syncpack": "^8.2.4",
     "turbo": "^1.4.3"
   }

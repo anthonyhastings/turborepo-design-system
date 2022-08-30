@@ -1,1 +1,3 @@
-# hello world
+# TDS Utils
+
+A collection of utility methods and react hooks.
