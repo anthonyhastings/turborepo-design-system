@@ -1,0 +1,35 @@
+name: Lint
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set Node.js Version
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'yarn'
+
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile --prefer-offline
+
+      - name: Run type checking
+        run: yarn run types:check
+
+      - name: Run package checking
+        run: yarn run lint:packages
+
+      - name: Run format checking
+        run: yarn run lint:format
+
+      - name: Run linting
+        run: yarn run lint

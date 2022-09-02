@@ -2,21 +2,6 @@
 - Type-checking method for each package.
 - Ensure consistent package versioning via syncpack.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Turborepo Design System Starter
 
 This guide explains how to use a React design system starter powered by:
