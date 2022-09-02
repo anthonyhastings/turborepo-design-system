@@ -2,10 +2,11 @@ import * as React from 'react';
 
 export interface ButtonProps {
   children: React.ReactNode;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-export function Button(props: ButtonProps) {
-  return <button>{props.children}</button>;
+export function Button({ children, onClick }: ButtonProps) {
+  return <button onClick={onClick}>{children}</button>;
 }
 
 Button.displayName = 'Button';
