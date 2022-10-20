@@ -22,5 +22,18 @@ jobs:
       - name: Install Dependencies
         run: yarn install --frozen-lockfile --prefer-offline
 
+      # Turborepo attempts to run as many tasks as possible over all available CPU's.
+      # This causes problems when multiple Cypress tasks run concurrently as each tries
+      # to instantiate xvfb and only one can do so. The solution is to start the process
+      # beforehand and set the DISPLAY environment variable which stops Cypress from
+      # attempting to instantiate xvfb itself. Multiple processes of Cypress can share
+      # the same instance of xvfb.
       - name: Run tests
-        run: yarn run test --concurrency=1
+        run: |
+          Xvfb :99 & export DISPLAY=:99
+          echo ---
+          npx cypress info
+          echo ---
+          node -p 'os.cpus()'
+          echo ---
+          yarn run test

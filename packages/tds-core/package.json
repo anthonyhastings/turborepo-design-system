@@ -23,7 +23,7 @@
     "clean": "rm -rf .turbo && rm -rf cypress/screenshots && rm -rf cypress/videos && rm -rf node_modules && rm -rf dist",
     "dev": "tsup src/index.tsx --format esm,cjs --watch --dts --external react",
     "lint": "TIMING=1 eslint src/**/*.ts* --fix",
-    "test": "cypress run --component",
+    "test": "cypress run --component --browser=chrome",
     "test:gui": "cypress open --component --browser chrome",
     "types:check": "tsc --noEmit"
   },
