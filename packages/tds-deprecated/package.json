@@ -16,8 +16,11 @@
   "type": "module",
   "sideEffects": false,
   "exports": {
-    "require": "./dist/tds-deprecated.cjs",
-    "import": "./dist/tds-deprecated.js"
+    "./src": "./src/index.tsx",
+    ".": {
+      "require": "./dist/tds-deprecated.cjs",
+      "import": "./dist/tds-deprecated.js"
+    }
   },
   "license": "MIT",
   "files": [
