@@ -1,5 +1,11 @@
 # @anthonyhastings/tds-deprecated
 
+## 0.2.1
+
+### Patch Changes
+
+- edb90d7: fixing exports of package file
+
 ## 0.2.0
 
 ### Minor Changes
