@@ -10,19 +10,23 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
+  "main": "./dist/tds-utils.cjs",
+  "module": "./dist/tds-utils.js",
   "types": "./dist/index.d.ts",
+  "type": "module",
   "sideEffects": false,
+  "exports": {
+    "require": "./dist/tds-utils.cjs",
+    "import": "./dist/tds-utils.js"
+  },
   "license": "MIT",
   "files": [
     "dist/**"
   ],
   "scripts": {
-    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
-    "dev": "tsup src/index.tsx --format esm,cjs --watch --dts --external react",
-    "lint": "TIMING=1 eslint src/**/*.ts* --fix",
+    "build": "vite build && tsc --project tsconfig.json --declaration --emitDeclarationOnly --outDir dist",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "lint": "TIMING=1 eslint src/**/*.ts* --fix",
     "test": "jest",
     "types:check": "tsc --noEmit"
   },
@@ -40,7 +44,7 @@
     "react-test-renderer": "^18.1.0",
     "ts-jest": "^28.0.8",
     "ts-node": "^10.9.1",
-    "tsup": "^5.10.1",
-    "typescript": "^4.5.4"
+    "typescript": "^4.5.4",
+    "vite": "^3.0.8"
   }
 }
