@@ -1,6 +1,6 @@
 {
   "name": "tds-docs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "build": "build-storybook --docs",
@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@anthonyhastings/tds-core": "^0.1.0",
-    "@anthonyhastings/tds-deprecated": "^0.1.0",
+    "@anthonyhastings/tds-deprecated": "^0.2.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
