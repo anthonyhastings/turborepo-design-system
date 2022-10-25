@@ -6,7 +6,6 @@
   ],
   "scripts": {
     "build": "turbo run build",
-    "dev": "turbo run dev --no-cache --parallel --continue",
     "lint": "turbo run lint",
     "lint:packages": "npm-run-all --parallel --print-label --continue-on-error lint:packages:*",
     "lint:packages:semver": "syncpack lint-semver-ranges --dev --prod --peer --semver-range='^'",

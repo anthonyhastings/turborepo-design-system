@@ -1,6 +1,6 @@
 {
   "extends": "config-tsconfig/react-library.json",
-  "include": ["."],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "cypress/"],
   "exclude": ["dist", "build", "node_modules"],
   "compilerOptions": {
     "types": ["cypress", "@testing-library/cypress", "node"]
