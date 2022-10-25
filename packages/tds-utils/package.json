@@ -1,7 +1,7 @@
 {
   "name": "@anthonyhastings/tds-utils",
   "description": "A collection of utility methods and react hooks.",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "repository": {
     "directory": "packages/tds-utils",
     "type": "git",
