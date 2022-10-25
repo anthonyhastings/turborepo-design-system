@@ -1,5 +1,12 @@
 # tds-docs
 
+## 0.0.2
+
+### Patch Changes
+
+- Updated dependencies [05b368d]
+  - @anthonyhastings/tds-deprecated@0.2.0
+
 ## 0.0.1
 
 ### Patch Changes
