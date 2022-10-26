@@ -26,7 +26,7 @@
   "scripts": {
     "build": "vite build && tsc --project tsconfig.build.json --declaration --emitDeclarationOnly --outDir dist",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
-    "lint": "TIMING=1 eslint src/**/*.ts* --fix",
+    "lint": "TIMING=1 eslint --ext .ts,.tsx src/",
     "test": "jest",
     "types:check": "tsc --noEmit"
   },

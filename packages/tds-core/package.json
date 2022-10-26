@@ -1,7 +1,7 @@
 {
   "name": "@anthonyhastings/tds-core",
   "description": "A collection of react components.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "repository": {
     "directory": "packages/tds-core",
     "type": "git",
@@ -10,19 +10,26 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
+  "main": "./dist/tds-core.cjs",
+  "module": "./dist/tds-core.js",
   "types": "./dist/index.d.ts",
+  "type": "module",
   "sideEffects": false,
+  "exports": {
+    "./src": "./src/index.tsx",
+    ".": {
+      "require": "./dist/tds-core.cjs",
+      "import": "./dist/tds-core.js"
+    }
+  },
   "license": "MIT",
   "files": [
     "dist/**"
   ],
   "scripts": {
-    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
+    "build": "vite build && tsc --project tsconfig.build.json --declaration --emitDeclarationOnly --outDir dist",
     "clean": "rm -rf .turbo && rm -rf cypress/screenshots && rm -rf cypress/videos && rm -rf node_modules && rm -rf dist",
-    "dev": "tsup src/index.tsx --format esm,cjs --watch --dts --external react",
-    "lint": "TIMING=1 eslint src/**/*.ts* --fix",
+    "lint": "TIMING=1 eslint --ext .ts,.tsx src/ cypress/",
     "test": "cypress run --component --browser=chrome",
     "test:gui": "cypress open --component --browser chrome",
     "types:check": "tsc --noEmit"
@@ -39,7 +46,6 @@
     "eslint-config-tds": "*",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "tsup": "^5.10.1",
     "typescript": "^4.5.4",
     "vite": "^3.0.8"
   }
