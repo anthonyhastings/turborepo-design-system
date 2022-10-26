@@ -1,5 +1,11 @@
 # @anthonyhastings/tds-core
 
+## 0.2.0
+
+### Minor Changes
+
+- 5ee381f: Updating build process to use Vite + TSC
+
 ## 0.1.0
 
 ### Minor Changes
