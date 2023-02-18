@@ -10,7 +10,7 @@
     "lint:packages": "npm-run-all --parallel --print-label --continue-on-error lint:packages:*",
     "lint:packages:semver": "syncpack lint-semver-ranges --dev --prod --peer --semver-range='^'",
     "lint:packages:mismatches": "syncpack list-mismatches --dev --prod --peer",
-    "lint:format": "prettier --check \"**/*.{js,ts,tsx,md,mdx}\"",
+    "lint:format": "prettier --check \"**/*.{js,ts,tsx,md,mdx,json}\"",
     "clean": "turbo run clean && rm -rf node_modules",
     "changeset": "changeset add",
     "version-packages": "changeset version",
