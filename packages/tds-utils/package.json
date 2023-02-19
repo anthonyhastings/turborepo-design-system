@@ -33,6 +33,10 @@
     "test": "jest",
     "types:check": "tsc --noEmit"
   },
+  "peerDependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  },
   "devDependencies": {
     "@testing-library/react-hooks": "^8.0.1",
     "@types/jest": "^28.1.7",
