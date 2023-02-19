@@ -8,8 +8,8 @@
     "build": "turbo run build",
     "lint": "turbo run lint",
     "lint:packages": "npm-run-all --parallel --print-label --continue-on-error lint:packages:*",
-    "lint:packages:semver": "syncpack lint-semver-ranges --dev --prod --peer --semver-range='^'",
-    "lint:packages:mismatches": "syncpack list-mismatches --dev --prod --peer",
+    "lint:packages:semver": "syncpack lint-semver-ranges",
+    "lint:packages:mismatches": "syncpack list-mismatches",
     "lint:format": "prettier --check \"**/*.{js,ts,tsx,md,mdx,json}\"",
     "clean": "turbo run clean && rm -rf node_modules",
     "changeset": "changeset add",
@@ -28,7 +28,7 @@
     "husky": "^8.0.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.7.1",
-    "syncpack": "^8.2.4",
+    "syncpack": "^9.7.4",
     "turbo": "^1.4.3"
   }
 }
