@@ -7,7 +7,12 @@ module.exports = {
       jsx: true,
     },
   },
-  extends: ['turbo', 'plugin:react/recommended', 'prettier'],
+  extends: [
+    'turbo',
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
+    'prettier',
+  ],
   rules: {
     'react/jsx-key': 'off',
   },
