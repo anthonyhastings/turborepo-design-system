@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import react from '@vitejs/plugin-react-swc';
 
 export default defineConfig({
   build: {
@@ -11,7 +11,7 @@ export default defineConfig({
       external: ['react', 'react-dom'],
     },
     sourcemap: true,
-    target: 'es2019',
+    target: 'es2020',
   },
   plugins: [react()],
   publicDir: false,

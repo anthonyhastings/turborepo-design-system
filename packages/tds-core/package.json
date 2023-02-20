@@ -42,7 +42,7 @@
     "@testing-library/cypress": "^8.0.3",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
-    "@vitejs/plugin-react": "^3.1.0",
+    "@vitejs/plugin-react-swc": "^3.2.0",
     "config-prettier": "*",
     "config-tsconfig": "*",
     "cypress": "^12.6.0",
