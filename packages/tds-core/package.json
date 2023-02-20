@@ -16,7 +16,7 @@
   "type": "module",
   "sideEffects": false,
   "exports": {
-    "./src": "./src/index.tsx",
+    "./src": "./src/index.ts",
     ".": {
       "require": "./dist/tds-core.cjs",
       "import": "./dist/tds-core.js"
@@ -34,19 +34,23 @@
     "test:gui": "cypress open --component --browser chrome",
     "types:check": "tsc --noEmit"
   },
+  "peerDependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  },
   "devDependencies": {
     "@testing-library/cypress": "^8.0.3",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
-    "@vitejs/plugin-react": "^2.0.1",
+    "@vitejs/plugin-react-swc": "^3.2.0",
     "config-prettier": "*",
     "config-tsconfig": "*",
-    "cypress": "^10.5.0",
+    "cypress": "^12.6.0",
     "eslint": "^8.15.0",
     "eslint-config-tds": "*",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "typescript": "^4.5.4",
-    "vite": "^3.0.8"
+    "vite": "^4.1.2"
   }
 }

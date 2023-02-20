@@ -6,8 +6,12 @@ on:
     branches:
       - main
 
+env:
+  CYPRESS_CACHE_FOLDER: ${{ github.workspace }}/.cypress
+
 jobs:
   test:
+    name: Testing
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -19,8 +23,17 @@ jobs:
           node-version-file: '.nvmrc'
           cache: 'yarn'
 
+      - name: Restore Cypress Binary
+        uses: actions/cache@v3
+        with:
+          path: .cypress
+          key: cypress-binary-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+
       - name: Install Dependencies
-        run: yarn install --frozen-lockfile --prefer-offline
+        run: |
+          yarn install --frozen-lockfile --prefer-offline
+          yarn --silent cypress info
+          yarn --silent cypress cache list
 
       # Turborepo attempts to run as many tasks as possible over all available CPU's.
       # This causes problems when multiple Cypress tasks run concurrently as each tries
@@ -28,7 +41,7 @@ jobs:
       # beforehand and set the DISPLAY environment variable which stops Cypress from
       # attempting to instantiate xvfb itself. Multiple processes of Cypress can share
       # the same instance of xvfb.
-      - name: Run tests
+      - name: Run Package(s) Tests
         run: |
           Xvfb :99 & export DISPLAY=:99
           echo ---
