@@ -1,7 +1,7 @@
 {
   "name": "@anthonyhastings/tds-core",
   "description": "A collection of react components.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "repository": {
     "directory": "packages/tds-core",
     "type": "git",
