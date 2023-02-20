@@ -1,5 +1,13 @@
 # @anthonyhastings/tds-utils
 
+## 0.1.2
+
+### Patch Changes
+
+- 6ef6cfd: chore: adding peer dependencies for react and react-dom
+- 6ef6cfd: refactor: removing react imports where module only contains JSX (possibly due to automatic JSX runtime)
+- 6ef6cfd: refactor: ensuring react-dom is external and ensuring package file has consistent export statements
+
 ## 0.1.1
 
 ### Patch Changes
