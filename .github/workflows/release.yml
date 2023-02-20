@@ -36,6 +36,8 @@ jobs:
         with:
           publish: yarn run release
           version: yarn run version-packages
+          commit: 'chore: release package(s)'
+          title: 'chore: release package(s)'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
