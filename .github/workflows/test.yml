@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
 
       - name: Set Node.js Version
         uses: actions/setup-node@v3
@@ -34,6 +36,7 @@ jobs:
           yarn install --frozen-lockfile --prefer-offline
           yarn --silent cypress info
           yarn --silent cypress cache list
+          node -p 'os.cpus()'
 
       # Turborepo attempts to run as many tasks as possible over all available CPU's.
       # This causes problems when multiple Cypress tasks run concurrently as each tries
@@ -41,12 +44,18 @@ jobs:
       # beforehand and set the DISPLAY environment variable which stops Cypress from
       # attempting to instantiate xvfb itself. Multiple processes of Cypress can share
       # the same instance of xvfb.
+      #
+      # In order to be efficient we can ask Turborepo to only run commands against the
+      # workspaces that have files changed. Other workspaces will be ignored. In order
+      # to achieve this, normally the syntax would be:
+      #
+      # yarn run test --filter ...\[origin/main...origin/testing-packages\]
+      #
+      # However Github Actions checks out a repo in a detached head with no knowledge of
+      # any other branch. It has no concept of the trunk branch. To get around this, we
+      # update the `actions/checkout@v3` to fetch further back so we can use HEAD^1 to
+      # reference the commit we've branched off of (99% of time that'll be the trunk).
       - name: Run Package(s) Tests
         run: |
           Xvfb :99 & export DISPLAY=:99
-          echo ---
-          npx cypress info
-          echo ---
-          node -p 'os.cpus()'
-          echo ---
-          yarn run test
+          yarn run test --filter ...\[HEAD^1\]
