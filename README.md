@@ -19,6 +19,8 @@ This repository showcases using a monorepo to house a design system and the vari
 
 Using Turborepo simplifes managing your design system monorepo, as you can have a single lint, build, test, and release process for all packages. [Learn more](https://vercel.com/blog/monorepos-are-changing-how-teams-build-software) about how monorepos improve your development workflow.
 
+Turborepo is configured in CI/CD to only test packages that have changes detected in their workspaces, and, workspaces that depend on said package. For example, if Package A depends on Package B, and Package B changes, then turborepo will ensure both packages have their tests run.
+
 ## Main Features & Benefits
 
 Highlights of benefits from using this monorepo are:

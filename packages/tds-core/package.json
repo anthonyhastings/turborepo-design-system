@@ -2,6 +2,7 @@
   "name": "@anthonyhastings/tds-core",
   "description": "A collection of react components.",
   "version": "0.2.1",
+  "author": "Anthony Hastings <ar.hastings@gmail.com> (https://anthonyhastings.github.io/)",
   "repository": {
     "directory": "packages/tds-core",
     "type": "git",

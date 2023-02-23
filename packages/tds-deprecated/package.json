@@ -2,6 +2,7 @@
   "name": "@anthonyhastings/tds-deprecated",
   "description": "A collection of deprecated components preserved for historical purposes.",
   "version": "0.2.2",
+  "author": "Anthony Hastings <ar.hastings@gmail.com> (https://anthonyhastings.github.io/)",
   "repository": {
     "directory": "packages/tds-deprecated",
     "type": "git",
