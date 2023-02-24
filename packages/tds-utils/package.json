@@ -11,18 +11,25 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
-  "main": "./dist/tds-utils.cjs",
-  "module": "./dist/tds-utils.js",
+  "exports": {
+    "./src": "./src/index.ts",
+    "./src/strings": "./src/strings.ts",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    },
+    "./strings": {
+      "types": "./dist/strings.d.ts",
+      "import": "./dist/strings.js",
+      "require": "./dist/strings.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "type": "module",
   "sideEffects": false,
-  "exports": {
-    "./src": "./src/index.ts",
-    ".": {
-      "require": "./dist/tds-utils.cjs",
-      "import": "./dist/tds-utils.js"
-    }
-  },
   "license": "MIT",
   "files": [
     "dist/**"
