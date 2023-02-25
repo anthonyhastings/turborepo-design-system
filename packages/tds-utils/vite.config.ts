@@ -4,7 +4,10 @@ import react from '@vitejs/plugin-react-swc';
 export default defineConfig({
   build: {
     lib: {
-      entry: './src/index.ts',
+      entry: {
+        index: './src/index.ts',
+        strings: './src/strings.ts',
+      },
       formats: ['cjs', 'es'],
     },
     rollupOptions: {
