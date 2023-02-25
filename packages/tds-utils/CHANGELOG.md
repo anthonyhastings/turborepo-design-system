@@ -1,5 +1,11 @@
 # @anthonyhastings/tds-utils
 
+## 0.2.0
+
+### Minor Changes
+
+- 01c7f54: feat: adding new functionality and multiple exported modules
+
 ## 0.1.2
 
 ### Patch Changes
