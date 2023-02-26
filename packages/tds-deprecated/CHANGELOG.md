@@ -1,5 +1,11 @@
 # @anthonyhastings/tds-deprecated
 
+## 0.2.3
+
+### Patch Changes
+
+- 908078b: fix: ensuring TypeScript expects ESM for module resolution
+
 ## 0.2.2
 
 ### Patch Changes
