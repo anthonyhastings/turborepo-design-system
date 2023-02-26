@@ -27,18 +27,11 @@ jobs:
       - name: Install Dependencies
         run: yarn install --frozen-lockfile --prefer-offline
 
-      - name: Debug
-        run: |
-          echo "Ref: ${{ github.ref }}"
-          echo "Ref Name: ${{ github.ref_name }}"
-          echo "Base Ref: ${{ github.base_ref }}"
-          echo "Head Ref: ${{ github.head_ref }}"
-
       - name: Create Snapshot Release
         run: |
           echo '---'
           echo 'Detected Changes:'
           git diff
           echo '---'
-          yarn run version-packages --snapshot "snorlax"
-          yarn run release --tag "snorlax" --no-git-tag
+          yarn run version-packages --snapshot "${{ github.ref_name }}"
+          yarn run release --tag "${{ github.ref_name }}" --no-git-tag
