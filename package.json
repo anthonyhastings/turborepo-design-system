@@ -12,7 +12,7 @@
     "lint:packages:mismatches": "syncpack list-mismatches",
     "lint:format": "prettier --check \"**/*.{js,ts,tsx,md,mdx,json}\"",
     "clean": "turbo run clean && rm -rf node_modules",
-    "changeset": "changeset add",
+    "add-changeset": "changeset add",
     "version-packages": "changeset version",
     "prepare": "husky install",
     "prerelease": "yarn run build",
@@ -21,7 +21,7 @@
     "types:check": "turbo run types:check"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.22.0",
+    "@changesets/cli": "^2.26.0",
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
     "config-prettier": "*",

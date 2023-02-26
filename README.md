@@ -81,7 +81,7 @@ Storybook provides us with an interactive UI playground for our components. This
 
 ## Versioning & Publishing Packages
 
-- `yarn changeset` - Generate a changeset file
+- `yarn add-changeset` - Generate a changeset file
 - `yarn version-packages` - Update versions, changelogs and dependencies of packages.
 - `yarn release` - Publishes changes to package registry and creates git tags.
 
@@ -89,7 +89,7 @@ The monorepo uses [Changesets](https://github.com/changesets/changesets) to mana
 
 ### Generating the Changelog
 
-To generate your changelog, run `yarn changeset` locally:
+To generate your changelog, run `yarn add-changeset` locally:
 
 1. **Which packages would you like to include?** – This shows which packages and changed and which have remained the same. By default, no packages are included. Press `space` to select the packages you want to include in the `changeset`.
 1. **Which packages should have a major bump?** – Press `space` to select the packages you want to bump versions for.
