@@ -1,0 +1,44 @@
+name: Snapshot Release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  snapshot:
+    name: Snapshot Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Creating .npmrc file
+        run: |
+          cp .npmrc.example .npmrc
+          sed -i "s/INSERT_YOUR_GITHUB_ACCESS_TOKEN_HERE/$NPM_TOKEN/g" .npmrc
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Set Node.js Version
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'yarn'
+
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile --prefer-offline
+
+      - name: Debug
+        run: |
+          echo "Ref: ${{ github.ref }}"
+          echo "Ref Name: ${{ github.ref_name }}"
+          echo "Base Ref: ${{ github.base_ref }}"
+          echo "Head Ref: ${{ github.head_ref }}"
+
+      - name: Create Snapshot Release
+        run: |
+          echo '---'
+          echo 'Detected Changes:'
+          git diff
+          echo '---'
+          yarn run version-packages --snapshot "snorlax"
+          yarn run release --tag "snorlax" --no-git-tag
