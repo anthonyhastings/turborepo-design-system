@@ -1,4 +1,4 @@
-import { toSlug } from './toSlug';
+import { toSlug } from './toSlug.js';
 
 describe('#toSlug', () => {
   test.each([

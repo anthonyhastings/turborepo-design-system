@@ -1,2 +1,2 @@
-export { useIsomorphicLayoutEffect } from './utils/useIsomorphicLayoutEffect';
-export { usePrevious } from './utils/usePrevious';
+export { useIsomorphicLayoutEffect } from './utils/useIsomorphicLayoutEffect.js';
+export { usePrevious } from './utils/usePrevious.js';

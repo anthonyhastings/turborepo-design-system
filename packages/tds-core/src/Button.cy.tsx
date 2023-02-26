@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from './Button';
+import { Button } from './Button.js';
 
 it('renders with supplied children', () => {
   const onClickStub = cy.stub().as('onClickStub');

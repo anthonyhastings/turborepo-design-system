@@ -11,18 +11,19 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
+  "exports": {
+    "./src": "./src/index.ts",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/tds-deprecated.cjs",
+      "import": "./dist/tds-deprecated.js"
+    }
+  },
   "main": "./dist/tds-deprecated.cjs",
   "module": "./dist/tds-deprecated.js",
   "types": "./dist/index.d.ts",
   "type": "module",
   "sideEffects": false,
-  "exports": {
-    "./src": "./src/index.ts",
-    ".": {
-      "require": "./dist/tds-deprecated.cjs",
-      "import": "./dist/tds-deprecated.js"
-    }
-  },
   "license": "MIT",
   "files": [
     "dist/**"
