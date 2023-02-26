@@ -1,5 +1,5 @@
 import { renderHook } from '@testing-library/react-hooks';
-import { usePrevious } from './usePrevious';
+import { usePrevious } from './usePrevious.js';
 
 describe('#usePrevious', () => {
   it('1 + 1 = 2', () => {

@@ -1,1 +1,1 @@
-export { Anchor, type AnchorProps } from './Anchor';
+export { Anchor, type AnchorProps } from './Anchor.js';

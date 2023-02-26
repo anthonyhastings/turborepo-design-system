@@ -1,5 +1,5 @@
 import React from 'react';
-import { Anchor } from './Anchor';
+import { Anchor } from './Anchor.js';
 
 it('renders with supplied children', () => {
   cy.mount(<Anchor>Find out more</Anchor>);

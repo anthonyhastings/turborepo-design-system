@@ -11,18 +11,19 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
+  "exports": {
+    "./src": "./src/index.ts",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/tds-core.cjs",
+      "import": "./dist/tds-core.js"
+    }
+  },
   "main": "./dist/tds-core.cjs",
   "module": "./dist/tds-core.js",
   "types": "./dist/index.d.ts",
   "type": "module",
   "sideEffects": false,
-  "exports": {
-    "./src": "./src/index.ts",
-    ".": {
-      "require": "./dist/tds-core.cjs",
-      "import": "./dist/tds-core.js"
-    }
-  },
   "license": "MIT",
   "files": [
     "dist/**"

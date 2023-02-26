@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading } from './Heading';
+import { Heading } from './Heading.js';
 
 it('renders with supplied children', () => {
   cy.mount(<Heading>Why change?</Heading>);
