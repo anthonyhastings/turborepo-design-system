@@ -29,9 +29,9 @@ jobs:
 
       - name: Create Snapshot Release
         run: |
+          yarn run version-packages --snapshot "${{ github.ref_name }}"
           echo '---'
           echo 'Detected Changes:'
           git diff
           echo '---'
-          yarn run version-packages --snapshot "${{ github.ref_name }}"
           yarn run release --tag "${{ github.ref_name }}" --no-git-tag
