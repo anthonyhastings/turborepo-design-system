@@ -1,5 +1,11 @@
 # @anthonyhastings/tds-utils
 
+## 0.3.0
+
+### Minor Changes
+
+- 56bc683: feat: adding reverse method
+
 ## 0.2.1
 
 ### Patch Changes
