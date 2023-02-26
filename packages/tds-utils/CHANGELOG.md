@@ -1,5 +1,11 @@
 # @anthonyhastings/tds-utils
 
+## 0.2.1
+
+### Patch Changes
+
+- 908078b: fix: ensuring TypeScript expects ESM for module resolution
+
 ## 0.2.0
 
 ### Minor Changes
