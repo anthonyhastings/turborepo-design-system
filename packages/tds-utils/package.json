@@ -1,12 +1,12 @@
 {
-  "name": "@anthonyhastings/tds-utils",
+  "name": "@franz-bendezu/tds-utils",
   "description": "A collection of utility methods and react hooks.",
   "version": "0.3.0",
-  "author": "Anthony Hastings <ar.hastings@gmail.com> (https://anthonyhastings.github.io/)",
+  "author": "Anthony Hastings <ar.hastings@gmail.com> (https://franz-bendezu.github.io/)",
   "repository": {
     "directory": "packages/tds-utils",
     "type": "git",
-    "url": "https://github.com/anthonyhastings/turborepo-design-system.git"
+    "url": "https://github.com/franz-bendezu/turborepo-design-system.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"

@@ -1,4 +1,4 @@
-# @anthonyhastings/tds-core
+# @franz-bendezu/tds-core
 
 ## 0.2.2
 

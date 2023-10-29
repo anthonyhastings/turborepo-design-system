@@ -1,12 +1,12 @@
 {
-  "name": "@anthonyhastings/tds-deprecated",
+  "name": "@franz-bendezu/tds-deprecated",
   "description": "A collection of deprecated components preserved for historical purposes.",
   "version": "0.2.3",
-  "author": "Anthony Hastings <ar.hastings@gmail.com> (https://anthonyhastings.github.io/)",
+  "author": "Anthony Hastings <ar.hastings@gmail.com> (https://franz-bendezu.github.io/)",
   "repository": {
     "directory": "packages/tds-deprecated",
     "type": "git",
-    "url": "https://github.com/anthonyhastings/turborepo-design-system.git"
+    "url": "https://github.com/franz-bendezu/turborepo-design-system.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"

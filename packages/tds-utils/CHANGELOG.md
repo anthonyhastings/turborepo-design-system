@@ -1,4 +1,4 @@
-# @anthonyhastings/tds-utils
+# @franz-bendezu/tds-utils
 
 ## 0.3.0
 

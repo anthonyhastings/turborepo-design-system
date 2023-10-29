@@ -1,12 +1,12 @@
 {
-  "name": "@anthonyhastings/tds-core",
+  "name": "@franz-bendezu/tds-core",
   "description": "A collection of react components.",
   "version": "0.2.2",
-  "author": "Anthony Hastings <ar.hastings@gmail.com> (https://anthonyhastings.github.io/)",
+  "author": "Anthony Hastings <ar.hastings@gmail.com> (https://franz-bendezu.github.io/)",
   "repository": {
     "directory": "packages/tds-core",
     "type": "git",
-    "url": "https://github.com/anthonyhastings/turborepo-design-system.git"
+    "url": "https://github.com/franz-bendezu/turborepo-design-system.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"

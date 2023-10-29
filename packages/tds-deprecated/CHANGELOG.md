@@ -1,4 +1,4 @@
-# @anthonyhastings/tds-deprecated
+# @franz-bendezu/tds-deprecated
 
 ## 0.2.3
 

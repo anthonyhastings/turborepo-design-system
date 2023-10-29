@@ -76,7 +76,7 @@ Storybook provides us with an interactive UI playground for our components. This
 
 - Use Vite to bundle stories instantly (in milliseconds)
 - Automatically find any stories inside the `stories/` folder
-- Support using module path aliases like `@anthonyhastings/tds-core` for imports
+- Support using module path aliases like `@franz-bendezu/tds-core` for imports
 - Write MDX for component documentation pages
 
 ## Versioning & Publishing Packages
@@ -108,7 +108,7 @@ Merging this PR will, along with updating all of the files it changed, make the 
 
 ### Snapshot Releases
 
-Whenever you want to test a package in a consuming application before publishing a proper version for the wider public, we can create a snapshot release. These are special versions that take the form of `0.0.0-BRANCH_NAME-TIMESTAMP` e.g. `0.0.0-testing-snapshot-releases-20230226224821`. The branch name is also used as a dist-tag which points at the snapshot version e.g. `"@anthonyhastings/tds-utils": "testing-snapshot-releases"`. The separate dist-tag ensures we don't touch the `latest` dist-tag which is the tag used to determine what version of a package gets installed whenever someone installs it via `yarn install PACKAGE_NAME`.
+Whenever you want to test a package in a consuming application before publishing a proper version for the wider public, we can create a snapshot release. These are special versions that take the form of `0.0.0-BRANCH_NAME-TIMESTAMP` e.g. `0.0.0-testing-snapshot-releases-20230226224821`. The branch name is also used as a dist-tag which points at the snapshot version e.g. `"@franz-bendezu/tds-utils": "testing-snapshot-releases"`. The separate dist-tag ensures we don't touch the `latest` dist-tag which is the tag used to determine what version of a package gets installed whenever someone installs it via `yarn install PACKAGE_NAME`.
 
 To create a snapshot release we can use the manually dispatched 'Semantic Release' workflow. The sequence of operations is as follows:
 
