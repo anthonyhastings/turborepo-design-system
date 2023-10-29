@@ -10,7 +10,7 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 jobs:
   release:    
     permissions:
-      contents: read
+      contents: write
       packages: write
       pull-requests: write
     name: Releasing
