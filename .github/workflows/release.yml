@@ -23,7 +23,7 @@ jobs:
           cp .npmrc.example .npmrc
           sed -i "s/INSERT_YOUR_GITHUB_ACCESS_TOKEN_HERE/$NPM_TOKEN/g" .npmrc
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set Node.js Version
         uses: actions/setup-node@v3
