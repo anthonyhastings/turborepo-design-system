@@ -8,7 +8,10 @@ on:
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
-  release:
+  release:    
+    permissions:
+      contents: read
+      packages: write
     name: Releasing
     runs-on: ubuntu-latest
     steps:
@@ -40,4 +43,4 @@ jobs:
           title: 'chore: release package(s)'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
