@@ -12,6 +12,7 @@ jobs:
     permissions:
       contents: read
       packages: write
+      pull-requests: write
     name: Releasing
     runs-on: ubuntu-latest
     steps:
